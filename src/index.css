@@ -2,6 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 .root{
-font-family: 'Inter', sans-serif;
-font-family: 'Lato', sans-serif; 
+font-family: 'Roboto', sans-serif;
+
+}
+#body{
+    background: #05292E;
+}
+.img img{
+width:100%;
+height:220px;
+  }
+.Form{
+padding:35px;
+}
+.inputForm{
+width: 250px;
+padding-left:15px;
+}
+.search{
+background:#062226;
+padding: 15px;
+font-size:18px;
+color:white;
+font-weight:bold;
+}
+.ContainerLocation{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-direction:row;
+padding:20px;
+margin-bottom:20px;
+font-size:28px;
+}
+.ContainerLocation span{
+font-size:23px;
+font-weight:bold;
+}
+.Resident{
+display: flex;
+justify-content:center;
+font-size:20px;
+color:white;
+}
+.Resident li span{
+color:#7E7E7E;
+font-size:25px;
+}
+.Resident li{
+font-size: 30px;
+}
+.ResidentsCard{
+margin-left:15%;
+margin-right:15%;
+display:grid;
+gap:rem;
+grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
+grid-template-rows:auto;
+justify-item:center;
+color:white;
+font-size:35px;
 }
