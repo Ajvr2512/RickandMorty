@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const ResidentInfo = ({ urlResident }) => {
   const [residentInfo, setResidentInfo] = useState(null);
-
   const loadResidentInfo = async () => {
     try {
       const res = await axios.get(urlResident);
