@@ -3,49 +3,9 @@
 @tailwind utilities;
 .root{
 font-family: 'Roboto', sans-serif;
-
 }
 #body{
     background: #05292E;
-}
-.sugerencia{
-  padding: 5px;
-}
-.react-autosuggest__suggestions-container--open {
-  display: block;
-  position: absolute;
-  top: 31px;
-  width: 500px;
-  border: 1px solid #aaa;
-  background-color: #fff;
-  font-family: Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  z-index: 2;
-  max-height: 300px;
-  overflow: auto;
-  margin-top: 16px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.react-autosuggest__suggestions-list{
-  list-style: none;
-  margin-bottom: 0px;
-  padding-left: 0px;
-  cursor: pointer;
-}
-
-.react-autosuggest__input{
-  width: 500px;
-}
-
-.react-autosuggest__suggestion--highlighted {
-  background-color: #ddd;
 }
 /* Location*/
 .img img{
@@ -197,3 +157,52 @@ font-size:35px;
     }
   }
     
+  @media (max-width: 600px){
+    .img img{
+        height:120px;
+        }
+        .NameLocation{
+          font-size:28px;
+        }
+      .Form{
+      padding:15px;
+      }
+      .inputForm{
+      width: 230px;
+      }
+      .search{
+      padding: 10px;
+      font-size:15px;
+       }
+      .ContainerLocation{
+      gap:15px;
+      padding:10px;
+      font-size:15px;
+      }
+      .ContainerLocation span{
+      font-size:13px;
+      }
+      /*ResidentInfo*/
+      .Resident li span{
+      color:#7E7E7E;
+      font-size:15px;
+      }
+      .Resident li{
+      font-size: 15px;
+      }
+      .ListResident{
+      grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+      }
+      /*ResidentList*/
+      .ContainerButton{
+        font-size:15px;
+        gap:25px;
+      }
+      .ButtonPreNext{
+        width:15%;
+      }
+      .buttonPage{
+        width: 2.0rem;
+      }
+     
+  }
