@@ -8,7 +8,7 @@ import Loader from './component/Loader';
 
 function App() {
   const [LocationInfo, setLocationInfo] = useState(null);
-  const [idLocationValue, setIdLocationValue] = useState("");
+  const [idLocationValue, setIdLocationValue] = useState('');
 
   const getIdRandom = () => Random(1, 126);
   const loadLocationInfo = async (idLocation) => {
@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div>
       {LocationInfo ? (
         <div className="App">
           <div className="img">
@@ -60,7 +60,7 @@ function App() {
       ) : (
         <Loader />
       )}
-    </>
+    </div>
   );
 }
 

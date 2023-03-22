@@ -10,7 +10,6 @@ const ResidentsList = ({ residents }) => {
   const upperLimit = currentPage * quantity - 1;
 
   const ResidentSlice = residents.slice(lowerLimit, upperLimit + 1);
-
   const nextPage = () => {
     const newPage = currentPage + 1;
     if (newPage <= totalPages) setCurrentPage(newPage);
@@ -20,13 +19,13 @@ const ResidentsList = ({ residents }) => {
     const newPage = currentPage - 1;
     if (newPage >= 1) setCurrentPage(newPage);
   };
-  const pages = Array(totalPages).fill().map((_, i) => i + 1);
 
   const changePage = (newPage) => {
     if (newPage < 1) setCurrentPage(1);
     else if (newPage > totalPages) setCurrentPage(totalPages);
     else setCurrentPage(newPage);
   };
+  const pages = Array(totalPages).fill().map((_, i) => i + 1);
 
   return (
     <section>
@@ -39,15 +38,17 @@ const ResidentsList = ({ residents }) => {
       </div>
       <div className="ContainerButton">
         <button className="ButtonPreNext" onClick={previousPage}>Previous </button>
-        {pages.map((page) => (
-          <button
-            onClick={() => changePage(page)}
-            className={"buttonPage " + (page === currentPage ? "ButtonAct" : "")}
-            key={page}
-          >
-            {page}
-          </button>
-        ))}
+        {totalPages > 20
+          ? ''
+          : pages.map((page) => (
+              <button
+                onClick={() => changePage(page)}
+                className={"buttonPage " + (page === currentPage ? "ButtonAct" : "")}
+                key={page}
+              >
+                {page}
+              </button>
+            ))}
         <button className="ButtonPreNext" onClick={nextPage}> Next</button>
       </div>
     </section>
