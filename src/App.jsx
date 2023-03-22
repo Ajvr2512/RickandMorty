@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       {LocationInfo ? (
         <div className="App">
           <div className="img">
@@ -60,7 +60,7 @@ function App() {
       ) : (
         <Loader />
       )}
-    </div>
+    </>
   );
 }
 
